@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>CFG Challenge II</title>
+    <link href="http://getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="http://getbootstrap.com/examples/jumbotron-narrow/jumbotron-narrow.css" rel="stylesheet">
+    <link href="../static/styles.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+  </head>
+
+  <body>
+    <div class="container">
+
+      <div class="header">
+        <nav>
+          <ul class="nav nav-pills pull-right">
+            <li role="presentation" ><a href="main">Home</a></li>
+            <li role="presentation" class="active"><a href="#">Sign Up</a></li>
+          </ul>
+        </nav>
+        <h3 class="text-muted">Code First Girls - Challenge II</h3>
+      </div>
+
+      <div class="jumbotron">
+        <h1>Fill in the form</h1>
+        <form class="form-signin" method="POST" action="/signup">
+          <label for="inputName" class="sr-only">Name</label>
+          <input type="name" value="" name="inputName" id="inputName" class="form-control" placeholder="Name" required autofocus>
+          <label for="inputEmail" class="sr-only">Email address</label>
+          <input type="email" value="" name="inputEmail" id="inputEmail" class="form-control" placeholder="Email address" required>
+          <label for="inputCity" class="sr-only">City</label>
+          <input type="text" value="" name="inputCity" id="inputCity" class="form-control" placeholder="City" required>
+          <label for="inputAnimal" class="sr-only">Favourite animal</label>
+          <input type="text" value="" name="inputAnimal" id="inputAnimal" class="form-control" placeholder="Favorite Animal" required>
+
+          <input type="submit" class="btn btn-lg btn-primary btn-block" value="Submit" />
+          <!-- <button id="btnSignUp" class="btn btn-lg btn-primary btn-block" type="button">Sign up</button> -->
+      </form>
+      </div>
+
+      <footer class="footer">
+        <p>&copy; Edyta Wrobel 2016</p>
+      </footer>
+
+    </div>
+    <!-- <script src="../static/js.js"></script>" -->
+  </body>
+</html>
