@@ -12,27 +12,23 @@
     <div class="container">
 
       <div class="header">
-        <nav>
-          <ul class="nav nav-pills pull-right">
-            <li role="presentation" ><a href="main">Home</a></li>
-            <li role="presentation" class="active"><a href="#">Sign Up</a></li>
-          </ul>
-        </nav>
         <h3 class="text-muted">Code First Girls - Challenge II</h3>
       </div>
+      <div class="jumbotron">
+      <div class="message">Thank you <strong>{{_name}}</strong></div>
+      <div class="message">Please check your email: <strong>{{_email}}</strong></div>
+      <div><h5>We learnt something about you:</h5></div>
+      <div class="email">You live in: <strong>{{_city}}</strong></div>
+      <div class="email">Where: <strong>{{_weather}}</strong></div>
+      <div class="email">And you love: <strong>{{_animal}}</strong></div>
+      </div>
 
-      <div class="message"><strong>{{_name}}</strong></div>
-      <div class="message"><strong>{{_email}}</strong></div>
-      <div class="email"><strong>{{_city}}</strong></div>
-      <div class="email"><strong>{{_animal}}</strong></div>
-      <div class="email"><strong>{{_weather}}</strong></div>
-
+      <a href="/showSignUp" class="btn btn-lg btn-primary btn-block">Start again</a>
 
       <footer class="footer">
         <p>&copy; Edyta Wrobel 2016</p>
       </footer>
 
     </div>
-    <!-- <script src="../static/js.js"></script>" -->
   </body>
 </html>

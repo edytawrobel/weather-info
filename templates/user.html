@@ -12,21 +12,18 @@
     <div class="container">
 
       <div class="header">
-        <nav>
-          <ul class="nav nav-pills pull-right">
-            <li role="presentation" ><a href="main">Home</a></li>
-            <li role="presentation" class="active"><a href="#">Sign Up</a></li>
-          </ul>
-        </nav>
         <h3 class="text-muted">Code First Girls - Challenge II</h3>
       </div>
-
+      <div class="jumbotron">
       <div class="name">Hello <strong>{{_name}}</strong></div>
-      <div class="email">Email: {{_email}}</div>
-      <div class="city">City: {{_city}}</div>
-      <div class="animal">Animal: {{_animal}}</div>
+      <!-- <div class="email">Email: {{_email}}</div> -->
+      <div class="city">Your City: {{_city}}</div>
+      <div class="animal">Favourite Animal: {{_animal}}</div>
       <br>
       <div class="weather">Weather info: {{_weather}}</div>
+      <br>
+      <br>
+      <iframe src="{{_giphy}}" width="250px" height="200px" frameBorder="0" allowFullScreen></iframe>
       <br>
       <br>
 
@@ -35,7 +32,7 @@
         <input type="sendEmail" value="" name="inputEmail" id="inputEmail" class="form-control" placeholder="Email address" required>
         <input id="sendEmail" type="submit" class="btn btn-lg btn-primary btn-block" value="Send email" />
       </form>
-
+    </div>
       <footer class="footer">
         <p>&copy; Edyta Wrobel 2016</p>
       </footer>
