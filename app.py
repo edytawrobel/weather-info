@@ -1,8 +1,6 @@
 from flask import Flask, render_template, json, request
 import requests
-# import giphypop
-# from giphypop import translate
-import urllib,json
+import urllib, json
 
 _name = ""
 _email = ""
@@ -35,7 +33,7 @@ def signUp():
 
     # Weather info
     endpoint = "http://api.openweathermap.org/data/2.5/weather"
-    payload = {"q": str(_city), "units":"celsius", "appid": "44db6a862fba0b067b1930da0d769e98"}
+    payload = {"q": str(_city), "units":"metric", "appid": "44db6a862fba0b067b1930da0d769e98"}
     response = requests.get(endpoint, params=payload)
     data = response.json()
     temperature = data["main"]["temp"]
@@ -46,7 +44,6 @@ def signUp():
     # Giphy https://github.com/Giphy/GiphyAPI
     data = json.loads(urllib.urlopen("http://api.giphy.com/v1/gifs/search?q=ryan+gosling&api_key=dc6zaTOxFJmzC&limit=5").read())
     _giphy = "http://api.giphy.com/v1/gifs/random?fmt=html&tag={}&api_key=dc6zaTOxFJmzC".format(_animal)
-    print _giphy
 
     # validate the received values
     if _name and _email and _city and _animal:
@@ -65,7 +62,6 @@ def thankYou():
     global _giphy
 
     _sendTo = request.form['inputEmail']
-    print _sendTo
 
     requests.post(
         "https://api.mailgun.net/v3/sandbox4b9b1d94381b48b4b05732cffa0da0ac.mailgun.org/messages",
